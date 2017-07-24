@@ -1,5 +1,5 @@
 my:
-  message: qqqqqqqqqqqqqqqqqqqqqqqq
+  message: aaaaaaaaaaaa
 
 server:
   port: ${port:9001}
@@ -23,6 +23,7 @@ server:
     port: 5672
     username: test
     password: test
+    virtualHost: /
 #Used for eureka config
 eureka:
   client:
