@@ -1,5 +1,5 @@
 my:
-  message: cccc
+  message: dfasdfsaf
 
 server:
   port: ${port:9001}
