@@ -16,6 +16,8 @@ server:
 #        trace:
 #           enabled: true
 spring:
+   application:
+      name: my-config-client
   cloud:
     config:
       name: ${spring.application.name}
