@@ -1,5 +1,5 @@
 my:
-  message: bbbbbbbbbbbb
+  message: aaaaaaaaaaaa
 
 server:
   port: ${port:9001}
