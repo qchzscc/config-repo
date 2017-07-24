@@ -2,7 +2,7 @@ my:
   message: configure
 
 server:
-  port: ${port:9000}
+  port: ${port:9003}
 
 #spring:
 #   cloud:
