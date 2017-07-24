@@ -1,5 +1,5 @@
 my:
-  message: this is configuration 2
+  message: configuration222222222222
 
 server:
   port: ${port:9002}
