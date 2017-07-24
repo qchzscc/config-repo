@@ -1,8 +1,8 @@
 my:
-  message: aaaaaaaaaaaa
+  message: ccccccc
 
 server:
-  port: ${port:9001}
+  port: ${port:9002}
 
 #spring:
 #   cloud:
