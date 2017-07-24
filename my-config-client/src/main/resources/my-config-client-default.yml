@@ -1,0 +1,71 @@
+my:
+  message: configure
+
+server:
+  port: ${port:9000}
+
+#spring:
+#   cloud:
+#      config:
+#        name: simple-helloword
+#        discovery:
+#          enabled: true
+#          serviceId: config-server
+#        profile: dev
+#      bus:
+#        trace:
+#           enabled: true
+spring:
+  cloud:
+    config:
+      name: ${spring.application.name}
+      discovery:
+        enabled: true
+        serviceId: config-server
+      profile: ${profile:default}
+      fail-fast: true
+      retry:
+        initial-interval: 10000
+        multiplier: 1
+        max-interval: 20000
+        max-attempts: 6   
+     
+  boot:
+     admin:
+      url: http://localhost:8050
+  rabbitmq:
+    host: 10.143.128.111
+    port: 5672
+    username: test
+    password: test
+    virtualHost: /
+#Used for eureka config
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 13
+    prefer-ip-address: true
+
+#Used for application monitoring(actuator)    
+management:
+  security:
+    enabled: false
+#  context-path: /admin
+
+endpoints:
+  health:
+    enabled: false
+    sensitive: false
+
+logging:
+  config:
+     classpath: "logback-spring.xml"
+#  level:    
+# #   cloud.simple.hello.web.Controller: 'INFO'
+
+    
